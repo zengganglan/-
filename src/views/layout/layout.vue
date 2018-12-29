@@ -37,6 +37,8 @@
       left: 0;
       height: 40px;
       background-color: aquamarine;
+      border-bottom: 2px solid #BDC0C3;
+      z-index: 999;
   }
   .main-container{
 /* 由两个子元素撑开 */
@@ -44,6 +46,6 @@
   }
   .main-container>div:nth-child(2){
       flex: 1;
-      background-color: azure;
+      background-color: #FCE7E7;
   }
 </style>

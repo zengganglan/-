@@ -67,7 +67,8 @@
                   </el-menu-item-group>
                 </el-submenu>
 
-              <el-submenu index="3">
+              <el-submenu index="3"
+               background-color="#35383B">
                   <template slot="title">
                     <span>学生管理</span>
                   </template>
@@ -233,7 +234,7 @@ h5{
 }
 .nav {
   width: 270px;
-  height: 560px;
+  height: 1250px;
   background-color: blueviolet;
   position: relative;
   > .left {
@@ -241,7 +242,7 @@ h5{
     width: 60px;
     top: 0;
     left: 0;
-    height: 560px;
+    height: 1250px;
     background-color: rgb(86,160,199);
 
     > li {
