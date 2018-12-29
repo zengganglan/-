@@ -31,19 +31,21 @@
               </div>
           </div>
            <div class="box22">
-            <div class="a1">
+            
+             <div class="a1">
             人员管top
             </div>
             <div class="a2">
             人员管bottom
             </div>
+          
            </div>
        </div>
        <div class="box2">
-           <div>1</div>
-           <div>2</div>
-           <div>3</div>
-           <div>4</div>
+           <div class="box33">测评中心</div>
+           <div class="box33">咨询中心</div>
+           <div class="box33">档案中心</div>
+           <div class="box33">校园时事</div>
        </div>
 
      </div>
@@ -59,7 +61,13 @@ $(function(){
      $(this).css({transform: 'rotateY(0deg)', transition: "all 1s ease" })   
      })
      $(".box22").mouseover(function(){
-     $(this).css({transform: 'rotateY(0deg)', transition: "all 1s ease" })   
+     $(".a1").css({top: '-110px', transition: "all 1s ease" })   
+     $(".a2").css({top: '0px', transition: "all 1s ease" })   
+
+     }).mouseout(function(){
+           $(".a1").css({top: '0px', transition: "all 1s ease" })   
+          $(".a2").css({top: '110px', transition: "all 1s ease" })   
+
      })
 })
     export default {
@@ -100,9 +108,10 @@ $(function(){
      padding-left: 20px;
      margin-top: 10px;
      >.box1{
-         height: 92px;
+         height: 110px;
          position: relative;
          >.box11{
+             cursor: pointer;
             float: left;
              height: 100%;
              width: 300px;
@@ -130,22 +139,45 @@ $(function(){
             }
          }
         >.box22{
-             position: absolute;
-             left: 310px;
-             top:0;
+               cursor: pointer;
+             position: relative;
              float: left;
              height: 100%;
              width: 300px;
              margin-left: 10px;
-             background-color: blue;
+             background-color: #0099CC;
              overflow: hidden;
-             >.a1,.a2{
+                >.a1, .a2{
                  width: 100%;
-                 height: 100%;
+                 height: 110px;
+                }
+                >.a1{
+                    position: absolute;
+                    top:0
+                }
+                 >.a2{
+                    position: absolute;
+                    top:110px
+                }
+           
              }
+           
+                
 
-        }
+       
       
+     }
+     >.box2{
+         margin-top: 15px;
+         height: 110px;
+         >.box33{
+             height: 100%;
+             float: left;
+             margin-right: 10px;
+             width: 145px;
+             background-color: #0099CC;
+             cursor: pointer;
+         }
      }
  }
 </style>

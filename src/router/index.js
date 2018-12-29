@@ -4,11 +4,17 @@ import layout from '../views/layout/layout'
 import school from '../views/layout/school'
 import testList from "../views/test/testList"
 import report from "../views/test/report"
+import login from "../views/login/login"
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    //登陆页
+    {path:"/login",
+     name:'登陆',
+     component:login
+    },
     //初始页
     { path: '/index',
       name: '生涯测评',
