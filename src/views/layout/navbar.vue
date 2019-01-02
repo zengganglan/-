@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <template  v-if="userId==1">
   <div class="nav">
     <ul class="left">
       <li class="firstnav">
@@ -142,7 +144,157 @@
       </li>
     </ul>
   </div>
+  </template>
+
+  <template  v-else="userId==2">
+   <div class="nav">
+    <ul class="left">
+      <li class="firstnav">
+        <span>人员</span>
+        <i>1</i>
+      </li>
+      <li>
+        <span>测评中心</span>
+        <i>2</i>
+      </li>
+      <li>
+        <span>咨询中心</span>
+        <i>3</i>
+      </li>
+       <li>
+        <span>档案中心</span>
+        <i>2</i>
+      </li>
+      <li>
+        <span>拓展辅导</span>
+        <i>3</i>
+      </li>
+       <li>
+        <span>文章管理</span>
+        <i>2</i>
+      </li>
+      <li>
+        <span>系统管理</span>
+        <i>3</i>
+      </li>
+    </ul>
+    <ul class="right">
+      <li>
+        <ul>
+          <!-- <li>1.1</li> -->
+          <!-- <li>1.2</li>
+          <li>1.3</li>-->
+          <el-row class="tac">
+            <el-col :span="12">
+              <h5>人员管理</h5>
+              <el-menu
+                default-active="2"
+                class="el-menu-vertical-demo"
+                @open="handleOpen"
+                @close="handleClose"
+                background-color="#666666"
+                text-color="#fff"
+                active-text-color="#fff"
+            
+              >
+                
+
+                <el-menu-item index="1">
+                  <span slot="title">单位组别设置</span>
+                </el-menu-item>
+
+                <el-submenu index="2">
+                  <template slot="title">
+                    <span>管理员管理</span>
+                  </template>
+                  <el-menu-item-group>
+                    <el-menu-item index="2-1">选项1</el-menu-item>
+                    <el-menu-item index="2-2">选项2</el-menu-item>
+                    <el-menu-item index="2-3">选项3</el-menu-item>
+                    <el-menu-item index="2-4">选项4</el-menu-item>
+                  </el-menu-item-group>
+                </el-submenu>
+
+              <el-submenu index="3"
+               background-color="#35383B">
+                  <template slot="title">
+                    <span>学生管理</span>
+                  </template>
+                  <el-menu-item-group>
+                    <el-menu-item index="3-1">选项1</el-menu-item>
+                    <el-menu-item index="3-2">选项2</el-menu-item>
+                  </el-menu-item-group>
+                  <el-menu-item-group title="">
+                    <el-menu-item index="3-3">选项3</el-menu-item>
+                  </el-menu-item-group>
+                  <el-submenu index="3-4">
+                    <template slot="title">选项4</template>
+                    <el-menu-item index="3-4-1">选项1</el-menu-item>
+                  </el-submenu>
+                </el-submenu>
+
+                <el-menu-item index="4" >
+                  <span slot="title">导航4</span>
+                </el-menu-item>
+
+                <el-menu-item index="5">
+                  <span slot="title">导航5</span>
+                </el-menu-item>
+
+              </el-menu>
+            </el-col>
+          </el-row>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>2.1</li>
+          <li>2.2</li>
+          <li>2.3</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>3.1</li>
+          <li>3.2</li>
+          <li>3.3</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>4.1</li>
+          <li>4.2</li>
+          <li>4.3</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>5.1</li>
+          <li>5.2</li>
+          <li>5.3</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>6.1</li>
+          <li>6.2</li>
+          <li>6.3</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>7.1</li>
+          <li>7.2</li>
+          <li>7.3</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </template>
+  </div>
+</template>
+
+
 <script>
 import $ from "jquery";
 $(function() {
@@ -205,6 +357,11 @@ $(function() {
 
 export default {
   name: "Navbar",
+  data() {
+    return {
+      userId: 2
+    }
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
