@@ -37,6 +37,11 @@
       left: 0;
       height: 40px;
       background-color: aquamarine;
+<<<<<<< HEAD
+=======
+      border-bottom: 2px solid #BDC0C3;
+      z-index: 999;
+>>>>>>> de26c39ac5acef032fb661e3e8444bb2b77babe6
   }
   .main-container{
 /* 由两个子元素撑开 */
@@ -44,6 +49,10 @@
   }
   .main-container>div:nth-child(2){
       flex: 1;
+<<<<<<< HEAD
       background-color: azure;
+=======
+      background-color: #FCE7E7;
+>>>>>>> de26c39ac5acef032fb661e3e8444bb2b77babe6
   }
 </style>

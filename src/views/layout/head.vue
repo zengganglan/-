@@ -17,6 +17,11 @@
 </template>
 
 <script>
+<<<<<<< HEAD
+=======
+   import $ from "jquery";
+   
+>>>>>>> de26c39ac5acef032fb661e3e8444bb2b77babe6
     export default {
         
     }
